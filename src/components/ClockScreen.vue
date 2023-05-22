@@ -9,6 +9,9 @@
           {{ hours }}:{{ minutes }}<span class="seconds">:{{ seconds }}</span>
         </p>
       </div>
+      <div class="button" v-on:click="showMessage()">
+        <p>10秒後にアラームを設定</p>
+      </div>
     </div>
   </div>
 </template>
@@ -52,10 +55,53 @@ export default {
     setDate() {
       this.date = new Date();
     },
+    showMessage() {
+      window.setTimeout(() => {
+        alert("10秒経過しました");
+      }, 10000);
+    },
   },
 };
 </script>
 
-<style>
+<style scoped>
+.container {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #262626;
+}
 
+p {
+  margin: 0px;
+}
+
+.date,
+.time {
+  font-weight: 700;
+  color: #00ff01;
+}
+
+.date {
+  font-size: 16px;
+  text-align: right;
+}
+
+.time {
+  font-size: 70px;
+}
+
+.seconds {
+  font-size: 30px;
+}
+
+.button {
+  border: 1px solid #fcfcfc;
+  text-align: center;
+  padding: 10px 0;
+  color: #fcfcfc;
+  cursor: pointer;
+}
 </style>
