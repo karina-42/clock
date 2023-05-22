@@ -1,5 +1,7 @@
-# hello-world
+# Simple vue.js clock app
+My first time using vue.js following the [vue.js tutorial playlist by ロックシステムアカデミー](https://www.youtube.com/playlist?list=PLoFgufO-380UbVzmdkUZWvY2T7HjAnFqL) 
 
+## View here: [clock](https://my-vue-clock.netlify.app/)
 ## Project setup
 ```
 npm install
